@@ -12,11 +12,18 @@ def load_yaml_file(file_path):
 yaml_file_path = "D:/YamlProject/banking.yml"
 yaml_data = load_yaml_file(yaml_file_path)
 
-if yaml_data:
-    print("YAML data as Python data structures:")
-    print("")
-    pprint(yaml_data)
+# if yaml_data:
+#     print("YAML data as Python data structures:")
+#     print("")
+#     pprint(yaml_data)
 
-# listkeys = [k for k in yaml_data]
-# print(listkeys)
+# keys from the dictionary
+listkeys = [k for k in yaml_data]
+print("Info about yaml file : ",listkeys)
+
+
+for data in listkeys:
+    print(f"about {data} in yaml file : ")
+    print(f"{data}:{yaml_data[data]}\n")
+
 
